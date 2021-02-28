@@ -6,8 +6,6 @@ window.addEventListener("load", ()=> {
     let temperatureDegees = document.querySelector(".temperature-degree");
     let locationTimezone = document.querySelector(".location-timezone");
     
-
-
 if(navigator.geolocation) {
 
 navigator.geolocation.getCurrentPosition(position => {
@@ -29,13 +27,10 @@ navigator.geolocation.getCurrentPosition(position => {
         setIcons(icon, document.querySelector(".icon"))
                 
     })
-    
     .catch(err => {
         console.error(err);
     });
-
 })
-
 
 }else{
     h1.textContent ="This page requires your location to function..."
@@ -47,5 +42,4 @@ function setIcons(icon, iconID) {
     skycons.play();
     return skycons.set(iconID, Skycons[currentIcon]);
 }
-
 });
